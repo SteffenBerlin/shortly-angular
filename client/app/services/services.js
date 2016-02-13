@@ -6,6 +6,7 @@ angular.module('shortly.services', [])
       method: 'GET',
       url: '/api/links'
     }).then(function successCallback(response){
+      // var test = JSON.parse(response.data);
       console.log('these are the returned links', response.data);
       //returns an array of link objects
       return response.data;
