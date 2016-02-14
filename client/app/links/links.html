@@ -1,4 +1,8 @@
 <div id='container'>
-  <li>hello</li>
-  {{data}}
-</div>
+  
+  <div class='link' ng-repeat="data in data.links track by $index">
+    <div class='visits'><span class='count'>{{data.visits}}</span>Visits</div>
+    <div class='title'>{{data.title}}</div>
+    <div class='original'>{{data.url}}</div>
+    <a href='{{baseUrl}}/{{code}}'>{{data.baseUrl}}/{{data.code}}</a>
+  </div>
